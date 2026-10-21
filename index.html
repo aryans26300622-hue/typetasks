@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskLane</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>TaskLane</h1>
+    <p class="tagline">Move every task from todo to done.</p>
+
+    <div class="addrow">
+      <input id="title" placeholder="Add a task…" />
+      <button id="add">Add</button>
+    </div>
+
+    <div id="chips">
+      <button class="chip active" data-filter="all">all</button>
+      <button class="chip" data-filter="todo">todo</button>
+      <button class="chip" data-filter="in-progress">in-progress</button>
+      <button class="chip" data-filter="done">done</button>
+    </div>
+
+    <p id="summary"></p>
+    <ul id="list"></ul>
+  </main>
+
+  <!-- ⭐ loads the COMPILED js, as a module so it can import model.js -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
